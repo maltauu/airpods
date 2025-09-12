@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AirPods Max</title>
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <a href="#" class="name-state href">AirPods Max</a>
+      <nav class="nav">
+        <a href="#check" class="href">Обзор</a>
+        <a href="#harac" class="href">Характеристики</a>
+        <button href="#" class="buy" onclick="window.location.href='https://www.apple.com/airpods-max/'">Купить</button>
+      </nav>
+    </header>
+
+    <section class="hero reveal">
+      <div>
+        <h1 class="name">AirPods</h1>
+        <h2 class="name">Max</h2>
+        <p>Звук на новом уровне</p>
+        <button class="info" onclick="window.location.href='https://www.apple.com/airpods-max/'">Узнать больше</button>
+      </div>
+      <img src="./images/photo_2025-09-11_22-26-13-no-bg-preview (carve.photos).png" alt="AirPods Max" class="img">
+    </section>
+
+    <section class="section-blue reveal">
+      <h2 class="title">Погрузитесь в звук,<br> как никогда прежде</h2>
+      <p class="under-title">AirPods Max объединяют непревзойденное качество<br> звука с уникальным дизайном и интеллектуальными функциями.<br> Наслаждайтесь музыкой в совершенно новом формате.</p>
+    </section>
+
+    <section class="checked reveal" id="check">
+      <img src="./images/image 28-1.png" alt="AirPods Max" class="img">
+      <div>
+        <h3>Качество и комфорт в одном</h3>
+        <p>Абсолютно оригинальная композиция 
+AirPods Max — это совершенно<br> новый взгляд на полноразмерные наушники.<br> Все элементы, от амбушюров до оголовья,<br> спроектированы таким образом, чтобы наушники оптимально<br> прилегали к голове любой формы. Благодаря этому<br> достигается невероятное качество и богатство звука.</p>
+        <h3>Сказочно красивый звук</h3>
+        <p>Сочетание аудио высокой чёткости и передовой<br> системы шумоподавления — вот что делает звук таким качественным.<br> Все компоненты драйвера разработаны для точной передачи<br> звука в слышимом диапазоне с минимальными искажениями.<br> Глубокие насыщенные басы, точные средние<br> частоты и кристально чистые высокие ноты.</p>
+      </div>
+    </section>
+
+    <section class="details reveal">
+      <div>
+        <h3>Активное шумоподавление</h3>
+        <p>Передовая система активного шумоподавления<br> эффективно устраняет посторонние звуки с помощью<br> обратной звуковой волны, и вы буквально растворяетесь<br> в звуке. Используя кнопку активного шумоподавления,<br> можно переключиться в Прозрачный режим — вы будете<br> слышать окружающие звуки и комфортно общаться с людьми.</p>
+        <h3>Адаптивный эквалайзер</h3>
+        <p>Адаптивный эквалайзер подстраивает звук с учётом<br> положения наушников на голове. Микрофоны,<br> направленные внутрь, измеряют характеристики аудио,<br> которое вы слышите. На основании полученных данных<br> выполняется корректировка частот, и в результате вы получаете<br> богатое звучание и точную передачу каждого нюанса.</p>
+      </div>
+      <img src="./images/image 33-1.png" alt="AirPods Max" class="img">
+    </section>
+
+    <h1 class="mini-title reveal" id="harac">Превосходство<br> в каждом показателе</h1>
+
+    <section class="specs reveal">
+      <div>
+        <h2 class="h2"><span class="big">40</span> <span class="litle">мм</span><br> <span class="litle">динамики</span></h2>
+        <p>обеспечивают глубокий бас<br> и кристально чистые высокие частоты</p>
+      </div>
+      <div>
+        <h2 class="h2"><span class="big">9</span><br> <span class="litle">микрофонов</span></h2> 
+        <p>обеспечивают точное шумоподавление</p>
+      </div>
+      <div>
+        <h2 class="h2">До <span class="big">20</span> часов</h2>
+        <p>работы непрерывного прослушивания<br> на одном заряде</p>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <h2 class="cta-a">Готовы испытать<br> AirPods Max?</h2>
+      <p class="cta-b">Оцените сами, почему AirPods Max —<br> это больше, чем просто наушники.<br> Закажите прямо сейчас и окунитесь<br> в мир непревзойденного звука.</p>
+      <button class="buy-now" onclick="window.location.href='https://www.apple.com/airpods-max/'">Купить сейчас</button>
+    </section>
+
+    <footer class="foot reveal">
+      <p class="cont">Контакты</p>
+      <p class="time">123-380-4400<br>support@apple.com<br>Monday - Friday 9:00am - 7:00pm</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>
