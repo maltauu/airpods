@@ -16,7 +16,7 @@
       <nav class="nav">
         <a href="#check" class="href">Обзор</a>
         <a href="#harac" class="href">Характеристики</a>
-        <button href="#" class="buy" onclick="window.location.href='https://www.apple.com/airpods-max/'">Купить</button>
+        <button class="buy" onclick="window.location.href='https://www.apple.com/airpods-max/'">Купить</button>
       </nav>
     </header>
 
@@ -87,22 +87,23 @@ AirPods Max — это совершенно<br> новый взгляд на п�
   </div>
 
   <script>
-    function revealOnScroll() {
-      const reveals = document.querySelectorAll(".reveal");
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
 
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
       }
     }
+  }
 
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
   </script>
+  
 </body>
 </html>
 <!-- prod by malta -->
