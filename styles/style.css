@@ -3,8 +3,6 @@
 *::after {
   box-sizing: border-box;
   text-decoration: none;
-  flex-direction: row;
-
 }
 
 h1,
@@ -27,7 +25,9 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 button {
@@ -36,29 +36,29 @@ button {
 
 body {
   line-height: 1.5;
-  width: 1200px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
-} 
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .name-state {
-  font-size: 23px;
+  font-size: 1.4rem;
   text-decoration: none;
 }
 
 .nav {
-  font-size: 18px;
+  font-size: 1.1rem;
   text-decoration: none;
-  word-spacing: 20px;
+  word-spacing: 1.2rem;
 }
 
 .buy {
   background-color: #1d4a63;
   color: white;
   border: 0;
-  font-size: 16px;
-  padding: 5px 15px;
-  /* background: transparent; */
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
   transition: background 0.3s ease, color 0.3s ease;
   cursor: pointer;
   border-radius: 4px;
@@ -70,7 +70,7 @@ body {
 }
 
 .name {
-  font-size: 100px;
+  font-size: clamp(2.5rem, 8vw, 6rem);
   text-wrap: wrap;
   line-height: 1;
 }
@@ -79,7 +79,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
 section {
@@ -96,14 +95,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  font-size: 14px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .hero {
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   text-align: left;
-  margin: 10vh 0 10vh;
-  gap: 300px;
+  margin: 10vh 0;
+  gap: 50px;
 }
 
 .hero img {
@@ -117,20 +118,19 @@ header {
 
 .hero p {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #555;
 }
 
 .info {
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   background: #1d4a63;
   transition: background 0.3s ease, color 0.3s ease;
   cursor: pointer;
   color: white;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .info:hover {
@@ -141,21 +141,23 @@ header {
 .section-blue {
   background: #1d4a63;
   color: white;
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   padding: 40px;
-  gap: 150px;
+  gap: 50px;
 }
 
 .section-blue h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .checked,
 .details {
-  flex-direction: row;
-  gap: 100px;
-  margin: 10vh 0 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 10vh 0;
 }
 
 .checked img,
@@ -166,7 +168,7 @@ header {
 
 .checked h3,
 .details h3 {
-  font-size: 28px;
+  font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
@@ -177,29 +179,26 @@ header {
 }
 
 .specs {
+  display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   text-align: center;
-  gap: 40px;
-  font-size: 15px;
-  line-height: normal;
+  gap: 20px;
+  font-size: 0.95rem;
   margin: 20px 0;
 }
 
 .big {
-  font-size: 100px;
+  font-size: clamp(2rem, 10vw, 6rem);
 }
 
-
 .mini-title {
-  margin: 0 0 0 100px;
-  /* line-height: 1; */
-  line-height: normal;
-  font-size: 25px;
+  margin: 0 0 0 20px;
+  font-size: 1.6rem;
 }
 
 .litle {
-  font-size: 21px;
-  line-height: normal;
+  font-size: 1.3rem;
 }
 
 .h2 {
@@ -207,6 +206,7 @@ header {
 }
 
 .cta {
+  display: flex;
   flex-direction: column;
   justify-content: start; 
   align-items: start;
@@ -214,27 +214,25 @@ header {
 }
 
 .cta-a {
-  font-size: 70px;
-  line-height: normal;
-  margin: 0 0 0 100px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  margin: 0 0 0 20px;
 }
 
 .cta-b {
-  justify-content: start;
-  margin: 0 0 0 100px;
+  margin: 0 0 0 20px;
 }
 
 .buy-now {
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   background: #1d4a63;
   color: white;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  margin: 0 0 0 1200px;
+  margin: 20px 40px 0 auto;
+  display: block;
 }
 
 .buy-now:hover {
@@ -244,25 +242,26 @@ header {
 
 footer {
   padding: 40px 0;
-  font-size: 14px;
+  font-size: 0.9rem;
   color: #555;
   text-align: start;
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 50px;
+  gap: 30px;
 }
 
 .cont {
-  font-size: 40px;
-  margin: 10px 0 10px 100px;
+  font-size: 2rem;
+  margin: 10px 0 10px 20px;
 }
 
 .time {
-  margin: 10px 100px 10px 0;
-  font-size: 15px;
+  margin: 10px 20px;
+  font-size: 0.9rem;
 }
 
 .img, 
@@ -284,3 +283,59 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-blue {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .checked, .details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    word-spacing: normal;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .mini-title, .cta-a, .cta-b {
+    margin: 0;
+    text-align: center;
+  }
+
+  .buy-now {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .big {
+    font-size: 2.5rem;
+  }
+
+  .cont {
+    font-size: 1.5rem;
+    margin: 10px auto;
+  }
+}
+
+/* prod by malta */
